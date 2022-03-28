@@ -14,7 +14,7 @@ canvas.height = CANVAS_SIZE;
 ctx.fillStyle = "white";
 ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
 ctx.strokeStyle = "#2c2c2c";
-ctx.fillStyle = ""
+ctx.fillStyle = "INITIAL_COLOR"
 ctx.lineWidth = 2.5;
 
 let painting = false; 
@@ -87,6 +87,7 @@ if (canvas) {
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("mouseleave", stopPainting);
     canvas.addEventListener("click", handleCanvasClick);
+    canvas.addEventListener("contextmenu", hadleCM);
 }
 
 Array.from(colors).forEach(color =>
