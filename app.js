@@ -13,8 +13,8 @@ canvas.height = CANVAS_SIZE;
 
 ctx.fillStyle = "white";
 ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
-ctx.strokeStyle = "#2c2c2c";
-ctx.fillStyle = "INITIAL_COLOR"
+ctx.strokeStyle = INITIAL_COLOR;
+ctx.fillStyle = INITIAL_COLOR;
 ctx.lineWidth = 2.5;
 
 let painting = false; 
@@ -74,7 +74,7 @@ function handleCM(event){
 }
 
 function handleSaveClick(){
-    const image = canvas.toDataURL("");
+    const image = canvas.toDataURL();
     const link = document.createElement("a");
     link.href = image;
     link.download = "PaintJS [★]";
@@ -87,7 +87,7 @@ if (canvas) {
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("mouseleave", stopPainting);
     canvas.addEventListener("click", handleCanvasClick);
-    canvas.addEventListener("contextmenu", hadleCM);
+    canvas.addEventListener("contextmenu", handleCM);
 }
 
 Array.from(colors).forEach(color =>
