@@ -4,10 +4,11 @@ const ctx = canvas.getContext("2d")
 canvas.width = 500;
 canvas.height = 500;
 
-ctx.strokeStyle = "#2c2c2c"
+ctx.strokeStyle = "#2c2c2c";
 ctx.LineWidth = 2.5;
 
-Let painting = false; 
+let painting = false; 
+
 
 function stopPainting(){
     painting = false;
@@ -38,5 +39,5 @@ if (canvas) {
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mousedown", startPainting);
     canvas.addEventListener("mouseup", stopPainting);
-    canvas.addEventListener("mouseLeave", stoppainting);
+    canvas.addEventListener("mouseleave", stopPainting);
 }
