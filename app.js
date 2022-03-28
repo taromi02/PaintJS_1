@@ -1,4 +1,4 @@
-const canvas = document.getElementById("jscanvas")
+const canvas = document.getElementById("jsCanvas")
 const ctx = canvas.getContext("2d")
 
 canvas.width = 500;
@@ -25,7 +25,7 @@ function onMouseMove(event) {
         ctx.beginPath();
         ctx.moveTo(x, y);
     } else {
-        ctx.LineTo(x, y);
+        ctx.lineTo(x, y);
         ctx.stroke()
     }
 }
